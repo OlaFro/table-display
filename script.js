@@ -4,8 +4,8 @@ var stopBtn = document.getElementById("stopBtn");
 var clearBtn = document.getElementById("restartBtn");
 var interval;
 
-// if cell is clicked, toggle class .black
-// with (element).target
+// if cell is clicked (element).target), the class .black
+// will be toggled
 
 for (item of cells) {
   item.addEventListener("click", (element) => {
@@ -13,7 +13,8 @@ for (item of cells) {
   });
 }
 
-// ---start of start-button functions:---
+// ---beginning of the start-button functions:---
+
 // if clicked on start button, function "start" will be evoked
 startBtn.addEventListener("click", start);
 
@@ -39,7 +40,7 @@ function game() {
 }
 // ---end of start button functions---
 
-// stop button when click uses the method clearInterval on the global var interval
+// stop button when click uses the method clearInterval on the global var interval to stop the movement
 stopBtn.addEventListener("click", () => {
   clearInterval(interval);
 });
@@ -50,16 +51,3 @@ clearBtn.addEventListener("click", () => {
     item.classList.remove("black");
   }
 });
-
-// version with a dynamic ID:
-// var cells = document.getElementsByTagName("td");
-// var counter = 0;
-// for (item of cells) {
-//   item.setAttribute("id", `cellId_${counter}`);
-//   item.addEventListener("click", (counter) => {
-//     var idCounter = counter.srcElement.id;
-//     document.getElementById(idCounter).classList.toggle("black");
-//     console.log(counter.srcElement.id);
-//   });
-//   counter++;
-// }
