@@ -13,8 +13,16 @@ main {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  grid-template-columns: 1fr;
 }
 
 .black {
   background-color: black;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-around;
+  height: 60px;
+  align-items: center;
 }
